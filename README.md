@@ -1,6 +1,6 @@
 # Applied Statistics Assessment
 
-This is my README for Assessment for the module Applied Statistics
+This is my README for my assessment for the module Applied Statistics
 
 Author: Owen Coughlan
 
