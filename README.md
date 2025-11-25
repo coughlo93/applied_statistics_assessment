@@ -71,6 +71,6 @@ So the extended experiment gives much stronger evidence if someone gets a perfec
 
 ## References  
 
-Wikipedia. “Lady Tasting Tea.” https://en.wikipedia.org/wiki/Lady_tasting_tea  
-NumPy Documentation. https://numpy.org/doc/  
-Khan Academy – Probability and Combinations.  https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations
+- Wikipedia. “Lady Tasting Tea.” https://en.wikipedia.org/wiki/Lady_tasting_tea  
+- NumPy Documentation. https://numpy.org/doc/  
+- Khan Academy – Probability and Combinations.  https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations
