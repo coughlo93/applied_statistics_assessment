@@ -55,5 +55,22 @@ So with the bigger setup, a perfect guess is way less likely just by chance.
 Basically, the 12 cup version makes it much harder for someone who’s guessing to get everything correct.  
 If someone actually did get all 4 milk-first cups right in this extended version, it would be much stronger evidence that they really can tell the difference.
 
+## About the p-value Threshold
+In the original experiment, a perfect score had a p-value around 0.014.  
+In the extended version, it drops to about 0.002.
+
+So what does that mean?
+
+- You can keep the same significance level (like 0.05) and the extended design already beats it easily.
+- Or you could actually relax it a bit (maybe allow a small mistake), because even then the chance of someone passing just by luck is still extremely low.
+
+## Final Thoughts
+Increasing the number of cups makes the test much stricter, and random guessing performs way worse.  
+So the extended experiment gives much stronger evidence if someone gets a perfect (or near perfect) result.
 
 
+## References  
+
+Wikipedia. “Lady Tasting Tea.” https://en.wikipedia.org/wiki/Lady_tasting_tea  
+NumPy Documentation. https://numpy.org/doc/  
+Khan Academy – Probability and Combinations.  https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations
