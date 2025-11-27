@@ -7,7 +7,7 @@ Author: Owen Coughlan
 Email: g00439345@atu.ie
 
 
-# Problem 1: Extending the Lady Tasting Tea
+# Problem 1 - Extending the Lady Tasting Tea
 
 ## What I Did
 For this project, I took the original Lady Tasting Tea idea (8 cups total) and extended it to a bigger setup with 12 cups.  
@@ -71,9 +71,33 @@ So the extended experiment gives much stronger evidence if someone gets a perfec
 
 ## References  
 
-- Wikipedia. “Lady Tasting Tea.” https://en.wikipedia.org/wiki/Lady_tasting_tea  
-- NumPy Documentation. https://numpy.org/doc/  
-- Khan Academy – Probability and Combinations.  https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations
+- Wikipedia. “Lady Tasting Tea.” - https://en.wikipedia.org/wiki/Lady_tasting_tea  
+- NumPy Documentation. - https://numpy.org/doc/  
+- Khan Academy, Probability and Combinations. - https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations
 
 
-# Problem 1: Normal Distribution
+# Problem 2 - Normal Distribution
+
+In this part of my project, I’m running a simulation to compare two different methods for calculating standard deviation. The plan is to generate 100,000 samples, each containing 10 values drawn from a standard normal distribution. For each sample, I’ll compute the standard deviation in two different ways: once using the sample standard deviation (where ddof = 1) and once using the population standard deviation (where ddof = 0).
+
+Before I ran the code, I just wanted to see if the two formulas behaved differently when we repeated the experiment a ton of times. Since ddof = 1 and ddof = 0 divide by different values, I figured they wouldn't match up perfectly, especially with a smaller sample size.
+
+To kick things off, I imported NumPy and Matplotlib. These libraries helped me generate the data and create some plots later on. After setting a seed to ensure consistent results, I created 100,000 samples from the normal distribution.
+
+Next, I calculated the standard deviations using both methods for each sample, leading to two separate arrays of standard deviation values. Once I had those, I plotted them on the same histogram, using some transparency to see how they overlapped. The idea was to visually check how similar or different they were.
+
+## Observations
+
+When I looked at the histogram, I noticed that the two curves overlapped quite a bit, which makes sense since both formulas are trying to measure the same spread. However, there was a clear difference: the sample SD (ddof=1) sat a bit further to the right, while the population SD (ddof=0) leaned slightly to the left. Before creating the plot, I jotted down a note explaining that ddof=1 applies Bessel’s correction by dividing by n–1, which typically makes the sample SD a bit larger on average. Seeing this difference pop up in my simulation pretty much confirmed what the theory suggested.
+
+## What Happens If We Increase the Sample Size?
+
+I also wrote a note in my notebook about what I expected if the sample size increased (like going from 10 to 50 or even 100). I figured that as the sample size grows, the factor \( \frac{n}{n-1} \) gets closer to 1. This would lead to a much smaller difference between the two SD values, and I anticipated that both histograms would narrow and concentrate more closely around the true SD (which is 1 for the standard normal). So, with a large enough sample size, I expected that the two histograms would nearly overlap completely.
+
+## References
+
+- NumPy Documentation - https://numpy.org/doc/stable/reference/generated/numpy.std.html
+- SciPy Lecture Notes - https://scipy-lectures.org/intro/scipy.html#statistics
+- Khan Academy - Sample vs Population Standard Deviation — https://www.khanacademy.org/math/statistics-probability
+
+# Problem 3 - t-Tests
