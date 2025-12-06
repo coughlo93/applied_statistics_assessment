@@ -100,4 +100,4 @@ I also wrote a note in my notebook about what I expected if the sample size incr
 - SciPy Lecture Notes - https://scipy-lectures.org/intro/scipy.html#statistics
 - Khan Academy - Sample vs Population Standard Deviation — https://www.khanacademy.org/math/statistics-probability
 
-# Problem 3 - t-Tests
+# Problem 3 - t-Testscan
