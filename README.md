@@ -100,4 +100,30 @@ I also wrote a note in my notebook about what I expected if the sample size incr
 - SciPy Lecture Notes - https://scipy-lectures.org/intro/scipy.html#statistics
 - Khan Academy - Sample vs Population Standard Deviation — https://www.khanacademy.org/math/statistics-probability
 
-# Problem 3 - t-Testscan
+# Problem 3 - t-Tests
+
+In this part of the project, I’m looking at type II error, which is when we don’t reject the null hypothesis even though there actually is a difference. 
+
+The goal here was to see how often that happens when the true difference in means gets bigger.
+
+To do this, I ran a simulation for different mean differences \(d = 0, 0.1, 0.2, \dots, 1.0\). For each \(d\), I repeated the same experiment 1,000 times. Each time, I generated two independent samples of size 100:
+
+- Sample A was drawn from a standard normal distribution, \(N(0,1)\)
+- Sample B was drawn from \(N(d,1)\)
+
+Then I ran an independent samples t-test on the two samples. I treated it like a normal hypothesis test: if the p-value was less than 0.05, I rejected \(H_0\). Otherwise, I didn’t reject. Since Sample B is generated with mean \(d\), when \(d > 0\) the null hypothesis (no difference in means) is false, so the times I fail to reject \(H_0\) are basically my type II errors. I stored the proportion of “no reject” results for each \(d\) and plotted it against \(d\).
+
+## Observations
+When \(d = 0\), the two distributions are the same, so the null hypothesis is actually true. In that case, the test shouldn’t reject very often, and the proportion of “no reject” should be high (roughly around 0.95 because the significance level is 0.05).
+
+As \(d\) increases, the two groups become more separated, so it gets easier for the t-test to pick up the difference. On the plot, the type II error rate drops as \(d\) gets larger. This makes sense because the test has more “signal” to work with when the mean difference is bigger.
+
+So overall, the main pattern was that bigger mean difference meant the lower type II error rate (higher power).
+
+## References
+- NumPy Random Normal Documentation — https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html  
+- SciPy t-test Documentation — https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html  
+- Khan Academy (Type I and Type II Errors) — https://www.khanacademy.org/math/statistics-probability/significance-tests-confidence-intervals-new/type-1-errors/v/type-i-and-type-ii-errors
+- OpenIntro Statistics (Hypothesis Testing Errors) — https://www.openintro.org/book/os/
+
+# Problem 4 - Anova
