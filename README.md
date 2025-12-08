@@ -127,3 +127,6 @@ So overall, the main pattern was that bigger mean difference meant the lower typ
 - OpenIntro Statistics (Hypothesis Testing Errors) — https://www.openintro.org/book/os/
 
 # Problem 4 - Anova
+
+The aim of this problem is to simulate three groups from normal distributions with different means, and then test whether the group means look equal statistically.
+
