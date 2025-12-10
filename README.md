@@ -130,3 +130,33 @@ So overall, the main pattern was that bigger mean difference meant the lower typ
 
 The aim of this problem is to simulate three groups from normal distributions with different means, and then test whether the group means look equal statistically.
 
+## What I Did
+
+For this problem I generated three independent samples, each with:
+
+- Sample size: n = 30  
+- Standard deviation: 1  
+- Means:  
+  - Group 1: mean = 0  
+  - Group 2: mean = 0.5  
+  - Group 3: mean = 1  
+
+After generating the data, I used two approaches:
+
+1. One-way ANOVA to test the overall question:  
+ “Are all three population means equal?”
+
+2. Three pairwise two-sample t-tests (two-sided):  
+  - Sample 1 vs Sample 2  
+  - Sample 1 vs Sample 3  
+  - Sample 2 vs Sample 3  
+
+I also included a quick Bonferroni check to show what happens if you adjust for multiple comparisons.
+
+## Results
+In the notebook you’ll see:
+
+- A histogram + boxplot to get a feel for how much the three groups overlap.
+- The ANOVA F-statistic and p-value (one overall test).
+- The three t-test p-values (pair-by-pair comparisons).
+- A comparison section explaining how the conclusions can line up (or differ), depending on random sampling and the significance level.
