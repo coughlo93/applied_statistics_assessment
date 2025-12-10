@@ -160,3 +160,24 @@ In the notebook you’ll see:
 - The ANOVA F-statistic and p-value (one overall test).
 - The three t-test p-values (pair-by-pair comparisons).
 - A comparison section explaining how the conclusions can line up (or differ), depending on random sampling and the significance level.
+
+## Why ANOVA is Preferred
+
+Running lots of t-tests sounds straightforward, but it has a catch. Every extra test increases the chance you’ll get a significant result just by luck.
+
+ANOVA helps because:
+
+- It gives one overall test for “any difference at all” across the groups.
+- It does a better job controlling the overall Type I error rate (false positives) than doing multiple unadjusted t-tests.
+- If ANOVA is significant, you can then use proper **post-hoc tests (like Tukey HSD) that are designed for multiple comparisons.
+
+So the usual workflow is: ANOVA first, then post-hoc if you need to dig into which groups differ.
+
+## References
+- SciPy Documentation – f_oneway (one-way ANOVA): https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html  
+- SciPy Documentation – ttest_ind (independent two-sample t-test): https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html  
+- NIST/SEMATECH e-Handbook of Statistical Methods – One-way ANOVA overview: https://www.itl.nist.gov/div898/handbook/  
+- OpenIntro Statistics – Inference for comparing multiple means (ANOVA): https://www.openintro.org/book/os/  
+- NumPy Documentation – Random sampling from a normal distribution: https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html  
+
+# End 
